@@ -3,41 +3,98 @@
 <head>
 <meta charset="UTF-8">
 <title>Mariam</title>
-<link rel="stylesheet" href="style.css">
+<style>
+body {
+   margin: 0;
+   font-family: 'Georgia', serif;
+   background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+   color: #5a1a2b;
+   text-align: center;
+}
+header {
+   padding: 80px 20px;
+}
+h1 {
+   font-size: 4rem;
+}
+p {
+   font-size: 1.3rem;
+   max-width: 700px;
+   margin: 20px auto;
+   line-height: 1.8;
+}
+section {
+   background: rgba(255,255,255,0.9);
+   margin: 40px auto;
+   padding: 50px;
+   border-radius: 30px;
+   max-width: 850px;
+   box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+button {
+   margin-top: 30px;
+   padding: 15px 35px;
+   font-size: 1.2rem;
+   border: none;
+   border-radius: 30px;
+   background: #e6396f;
+   color: white;
+   cursor: pointer;
+   transition: 0.3s;
+}
+button:hover {
+   transform: scale(1.08);
+}
+#secret {
+   display: none;
+   animation: fade 1.5s ease;
+}
+@keyframes fade {
+   from { opacity: 0; transform: translateY(20px); }
+   to { opacity: 1; transform: translateY(0); }
+}
+.heart {
+   font-size: 2.5rem;
+   color: #e6396f;
+}
+footer {
+   padding: 30px;
+   opacity: 0.8;
+}
+</style>
 </head>
 <body>
 <audio autoplay loop>
 <source src="https://www.bensound.com/bensound-music/bensound-love.mp3" type="audio/mpeg">
 </audio>
-<nav>
-<a href="index.html">Home</a>
-<a href="feelings.html">Feelings</a>
-<a href="promise.html">Promise</a>
-<a href="gallery.html">Memories</a>
-</nav>
 <header>
 <h1>Mariam</h1>
 <p>
-       In a world full of chaos, Mariam is my calm.  
-       In a universe full of stars, Mariam is my favorite light.
+       وسط الدنيا المليانة دوشة، إنتِ هدوئي.  
+       وسط النجوم الكتيرة، إنتِ النور اللي بعشقه.
 </p>
-<button onclick="showLove()" class="love-btn">
-       Click for a Surprise 💖
-</button>
+<button onclick="showLove()">اضغطي للمفاجأة 💖</button>
 </header>
-<div id="secretLove" class="hidden-love">
-<h2>Mariam...</h2>
+<section id="secret">
+<h2>Mariam…</h2>
 <p>
-       You are not just someone I love,  
-       you are the reason love makes sense to me.  
-       Every heartbeat whispers your name.
+       إنتِ مش بس حد بحبه.  
+       إنتِ السبب اللي بيخلي الحب ليه معنى،  
+       واللي بيخلي قلبي يضحك من غير ما أسأل ليه.
+</p>
+<p>
+       مهما الحياة خدّتنا فين،  
+       قلبي دايمًا هيلف ويرجعلك.
 </p>
 <p class="heart">♥ ♥ ♥</p>
-</div>
+</section>
+<footer>
+   معمول بحب… مخصوص ليكي ❤️
+</footer>
 <script>
-   function showLove() {
-       document.getElementById("secretLove").style.display = "block";
-   }
+function showLove() {
+   document.getElementById("secret").style.display = "block";
+}
 </script>
 </body>
 </html>
